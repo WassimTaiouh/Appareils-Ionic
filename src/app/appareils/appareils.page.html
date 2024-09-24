@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+          <button ion-item *ngFor="let appareil of appareilsList" (click)="onLoadAppareil(appareil)">
+          <ion-icon name="power" [color]="appareil.isOn ? 'secondary' : 'danger'"></ion-icon>
+          {{appareil.name}}
+        </button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer padding>
+  <p>Bas de page</p>
+</ion-footer>
